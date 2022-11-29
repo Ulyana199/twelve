@@ -2,12 +2,11 @@ public class Afisha {
     private String[] movies = new String[0];
     private int limit;
 
-    public Afisha() {
-        limit = 10;
-    }
-
     public Afisha(int limit) {
         this.limit = limit;
+    }
+    public Afisha() {
+        limit = 10;
     }
 
     public void add(String movie) {
@@ -36,32 +35,4 @@ public class Afisha {
         }
         return tmp;
     }
-
-    public String[] moreLimit() {
-        int length;
-        if (movies.length > limit) {
-            length = movies.length;
-        } else {
-            length = limit;
-        }
-        String[] tmp = new String[length];
-        for (int i = 0; i < tmp.length; i++) {
-            tmp[i] = movies[movies.length - 1 - i];
-        }
-        return tmp;
-        }
-    public String[] equalLimit() {
-        int length;
-        if (movies.length == limit) {
-            length = movies.length;
-        } else {
-            length = limit;
-        }
-        String[] tmp = new String[length];
-        for (int i = 0; i < tmp.length; i++) {
-            tmp[i] = movies[movies.length - 1 - i];
-        }
-        return tmp;
-    }
 }
-
